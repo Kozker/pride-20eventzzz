@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Volume2, VolumeX } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -137,9 +138,7 @@ function StickyShowreel() {
     video.muted = muted;
     const playPromise = video.play();
     if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // allow autoplay fallback
-      });
+      playPromise.catch(() => undefined);
     }
   }, [muted]);
 
@@ -165,9 +164,10 @@ function StickyShowreel() {
   }, []);
 
   const toggleMute = () => {
-    setMuted((prev) => !prev);
+    const nextMuted = !muted;
+    setMuted(nextMuted);
     if (videoRef.current) {
-      videoRef.current.muted = !muted;
+      videoRef.current.muted = nextMuted;
     }
   };
 
@@ -324,8 +324,8 @@ function EventsShowcase() {
             transition={{ delay: 0.6, duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
             className="mt-10"
           >
-            <a
-              href="/service/events"
+            <Link
+              to="/service/events"
               className="group inline-flex items-center gap-6"
               style={{ perspective: "80px" }}
             >
@@ -336,7 +336,7 @@ function EventsShowcase() {
               >
                 <span className="text-2xl">→</span>
               </span>
-            </a>
+            </Link>
           </motion.div>
         </div>
         <motion.div
@@ -531,8 +531,8 @@ function HeroCarousel() {
               </div>
             </div>
             <div className="ml-[200px] flex flex-wrap items-center gap-6">
-              <a
-                href="/projects/filter"
+              <Link
+                to="/projects/filter"
                 className="group relative inline-flex items-center gap-3 rounded-md bg-white px-6 py-4 text-xs font-semibold uppercase tracking-[0.28em] text-foreground"
                 style={{ perspective: "180px" }}
               >
@@ -540,7 +540,7 @@ function HeroCarousel() {
                 <span className="relative z-10 text-lg">→</span>
                 <span className="absolute inset-0 rounded-md border border-foreground/10" />
                 <span className="absolute inset-0 rounded-md bg-primary/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              </a>
+              </Link>
             </div>
             <div className="mt-6 h-px w-full bg-white/40">
               <div
