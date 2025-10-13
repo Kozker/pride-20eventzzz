@@ -90,7 +90,8 @@ export default {
         },
       },
       animation: {
-        "clip-reveal": "clip-reveal 0.9s var(--tw-ease, cubic-bezier(0.76, 0, 0.24, 1)) forwards",
+        "clip-reveal":
+          "clip-reveal 0.9s var(--tw-ease, cubic-bezier(0.76, 0, 0.24, 1)) forwards",
         "float-up": "float-up 0.7s ease forwards",
       },
     },

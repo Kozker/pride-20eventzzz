@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { Volume2, VolumeX } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const SHOWREEL_VIDEO = "https://cdn.coverr.co/videos/coverr-stage-light-show-2881/1080p.mp4";
+const SHOWREEL_VIDEO =
+  "https://cdn.coverr.co/videos/coverr-stage-light-show-2881/1080p.mp4";
 const SHOWREEL_POSTER = "https://prideeventz.in/assets/home/banner-home.webp";
 
 const HERO_MASK_LINES = [
@@ -205,7 +206,11 @@ function StickyShowreel() {
                 <motion.span
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.15, duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                  transition={{
+                    delay: 0.15,
+                    duration: 0.6,
+                    ease: [0.76, 0, 0.24, 1],
+                  }}
                   className="text-[9.6px] font-semibold uppercase tracking-[0.32em] text-background"
                 >
                   {muted ? "Muted" : "Unmuted"}
@@ -224,7 +229,11 @@ function StickyShowreel() {
                     transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
                     className="text-foreground"
                   >
-                    {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+                    {muted ? (
+                      <VolumeX className="h-4 w-4" />
+                    ) : (
+                      <Volume2 className="h-4 w-4" />
+                    )}
                   </motion.span>
                 </button>
               </div>
@@ -249,7 +258,7 @@ function EventsShowcase() {
 
   const focusLines = useMemo(
     () => ["Corporate Events", "Brand Promotions", "Experience Content"],
-    []
+    [],
   );
 
   const descriptionLines = useMemo(
@@ -258,7 +267,7 @@ function EventsShowcase() {
       "Pride Eventz weaves décor, entertainment, and logistics into effortless storytelling.",
       "Every moment is meticulously produced to forge connection and amplify your message.",
     ],
-    []
+    [],
   );
 
   return (
@@ -285,7 +294,11 @@ function EventsShowcase() {
             <motion.div
               initial={{ y: 60, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
-              transition={{ delay: 0.1, duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+              transition={{
+                delay: 0.1,
+                duration: 0.8,
+                ease: [0.76, 0, 0.24, 1],
+              }}
               className="text-[128px] font-medium leading-[115.2px] tracking-[-3.84px]"
             >
               01
@@ -296,7 +309,11 @@ function EventsShowcase() {
                   key={line}
                   initial={{ y: 60, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : {}}
-                  transition={{ delay: 0.2 + index * 0.1, duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                  transition={{
+                    delay: 0.2 + index * 0.1,
+                    duration: 0.8,
+                    ease: [0.76, 0, 0.24, 1],
+                  }}
                   className="overflow-hidden"
                 >
                   <span className="block text-[38.4px] font-light leading-[46.08px] tracking-[-1.536px]">
@@ -312,7 +329,11 @@ function EventsShowcase() {
                 key={line}
                 initial={{ y: 35, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : {}}
-                transition={{ delay: 0.35 + index * 0.08, duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
+                transition={{
+                  delay: 0.35 + index * 0.08,
+                  duration: 0.7,
+                  ease: [0.76, 0, 0.24, 1],
+                }}
               >
                 {line}
               </motion.p>
@@ -329,7 +350,9 @@ function EventsShowcase() {
               className="group inline-flex items-center gap-6"
               style={{ perspective: "80px" }}
             >
-              <span className="block text-[38.4px] font-medium tracking-[-0.768px]">See what we create</span>
+              <span className="block text-[38.4px] font-medium tracking-[-0.768px]">
+                See what we create
+              </span>
               <span
                 className="relative flex h-16 w-16 items-center justify-center rounded-[6.4px] bg-background text-foreground shadow-[0_14px_40px_rgba(30,30,30,0.18)] transition-transform duration-500 group-hover:-translate-y-1"
                 style={{ transformStyle: "preserve-3d" }}
@@ -416,7 +439,7 @@ function HeroCarousel() {
                 transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
                 className={cn(
                   "absolute inset-0 h-full w-full",
-                  index === activeIndex ? "z-10" : "z-0"
+                  index === activeIndex ? "z-10" : "z-0",
                 )}
               >
                 <div className="absolute inset-0 bg-black/30" />
@@ -442,7 +465,11 @@ function HeroCarousel() {
                         key={line}
                         initial={{ y: 120, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.1 + index * 0.12, duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
+                        transition={{
+                          delay: 0.1 + index * 0.12,
+                          duration: 0.7,
+                          ease: [0.76, 0, 0.24, 1],
+                        }}
                         className="overflow-hidden"
                       >
                         <motion.h3 className="text-[80px] font-medium leading-[72px] text-white">
@@ -460,7 +487,11 @@ function HeroCarousel() {
                 <motion.span
                   initial={{ y: 60, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.2, duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                  transition={{
+                    delay: 0.2,
+                    duration: 0.6,
+                    ease: [0.76, 0, 0.24, 1],
+                  }}
                   className="inline-flex text-[36px] font-medium uppercase tracking-[-1.44px] text-white"
                 >
                   {activeSlide.category}
@@ -468,7 +499,11 @@ function HeroCarousel() {
                 <motion.span
                   initial={{ y: 70, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.25, duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                  transition={{
+                    delay: 0.25,
+                    duration: 0.6,
+                    ease: [0.76, 0, 0.24, 1],
+                  }}
                   className="inline-flex text-[36px] font-medium uppercase tracking-[-1.44px] text-white/70"
                 >
                   {activeSlide.location}
@@ -481,7 +516,11 @@ function HeroCarousel() {
                       key={line}
                       initial={{ y: 60, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.3 + index * 0.08, duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                      transition={{
+                        delay: 0.3 + index * 0.08,
+                        duration: 0.6,
+                        ease: [0.76, 0, 0.24, 1],
+                      }}
                     >
                       {line}
                     </motion.p>
@@ -515,7 +554,11 @@ function HeroCarousel() {
                 <motion.span
                   initial={{ y: 40, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.2, duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                  transition={{
+                    delay: 0.2,
+                    duration: 0.6,
+                    ease: [0.76, 0, 0.24, 1],
+                  }}
                   className="block text-[36px] font-medium uppercase tracking-[-1.44px]"
                 >
                   Highlight
@@ -523,7 +566,11 @@ function HeroCarousel() {
                 <motion.span
                   initial={{ y: 40, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.28, duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                  transition={{
+                    delay: 0.28,
+                    duration: 0.6,
+                    ease: [0.76, 0, 0.24, 1],
+                  }}
                   className="block text-[36px] font-medium uppercase tracking-[-1.44px]"
                 >
                   projects
@@ -557,7 +604,11 @@ function HeroCarousel() {
 
 function TextMaskOverlay() {
   return (
-    <svg className="absolute inset-0 h-full w-full" viewBox="0 0 1920 945" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className="absolute inset-0 h-full w-full"
+      viewBox="0 0 1920 945"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <defs>
         <mask id="hero-text-mask">
           <rect width="100%" height="100%" fill="white" />
@@ -578,7 +629,12 @@ function TextMaskOverlay() {
           </text>
         </mask>
       </defs>
-      <rect width="100%" height="100%" fill="#E0FF98" mask="url(#hero-text-mask)" />
+      <rect
+        width="100%"
+        height="100%"
+        fill="#E0FF98"
+        mask="url(#hero-text-mask)"
+      />
     </svg>
   );
 }
@@ -619,8 +675,9 @@ function ServicesSection() {
             transition={{ delay: 0.2, duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
             className="mt-6 text-lg leading-relaxed text-foreground/70"
           >
-            Pride Eventz delivers end-to-end event orchestration, blending precise logistics with creative storytelling to
-            leave lasting impressions.
+            Pride Eventz delivers end-to-end event orchestration, blending
+            precise logistics with creative storytelling to leave lasting
+            impressions.
           </motion.p>
         </div>
 
@@ -630,7 +687,11 @@ function ServicesSection() {
               key={service.id}
               initial={{ y: 60, opacity: 0 }}
               animate={inView ? { y: 0, opacity: 1 } : {}}
-              transition={{ delay: 0.1 + index * 0.07, duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
+              transition={{
+                delay: 0.1 + index * 0.07,
+                duration: 0.7,
+                ease: [0.76, 0, 0.24, 1],
+              }}
               className="group relative overflow-hidden rounded-[24px] border border-border/60 bg-secondary shadow-[0_20px_40px_rgba(30,30,30,0.08)]"
             >
               <div className="flex h-full flex-col">
@@ -647,8 +708,12 @@ function ServicesSection() {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col gap-6 p-8">
-                  <h3 className="text-[36px] font-medium tracking-[-1.08px]">{service.title}</h3>
-                  <p className="text-base leading-relaxed text-foreground/70">{service.description}</p>
+                  <h3 className="text-[36px] font-medium tracking-[-1.08px]">
+                    {service.title}
+                  </h3>
+                  <p className="text-base leading-relaxed text-foreground/70">
+                    {service.description}
+                  </p>
                   <div className="mt-auto flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-foreground/60">
                     <span>Discover more</span>
                     <span className="text-lg">→</span>
@@ -669,7 +734,10 @@ function AboutSection() {
 
   return (
     <section id="about" className="relative z-[2] bg-[#F3EFEB] py-32">
-      <div ref={containerRef} className="container grid gap-16 lg:grid-cols-[1.2fr_1fr]">
+      <div
+        ref={containerRef}
+        className="container grid gap-16 lg:grid-cols-[1.2fr_1fr]"
+      >
         <div className="space-y-10">
           <motion.span
             initial={{ y: 40, opacity: 0 }}
@@ -682,7 +750,11 @@ function AboutSection() {
           <motion.h2
             initial={{ y: 60, opacity: 0 }}
             animate={inView ? { y: 0, opacity: 1 } : {}}
-            transition={{ delay: 0.15, duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
+            transition={{
+              delay: 0.15,
+              duration: 0.7,
+              ease: [0.76, 0, 0.24, 1],
+            }}
             className="text-[80px] font-medium leading-[72px] tracking-[-2.4px]"
           >
             Crafting unforgettable moments that echo beyond the event day.
@@ -690,22 +762,34 @@ function AboutSection() {
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={inView ? { y: 0, opacity: 1 } : {}}
-            transition={{ delay: 0.25, duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
+            transition={{
+              delay: 0.25,
+              duration: 0.7,
+              ease: [0.76, 0, 0.24, 1],
+            }}
             className="grid gap-10 text-lg leading-relaxed text-foreground/75"
           >
             <div>
-              <h3 className="text-2xl font-semibold tracking-[-0.08em]">Our Mission</h3>
+              <h3 className="text-2xl font-semibold tracking-[-0.08em]">
+                Our Mission
+              </h3>
               <p className="mt-3">{ABOUT_CONTENT.mission}</p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold tracking-[-0.08em]">Our Vision</h3>
+              <h3 className="text-2xl font-semibold tracking-[-0.08em]">
+                Our Vision
+              </h3>
               <p className="mt-3">{ABOUT_CONTENT.vision}</p>
             </div>
           </motion.div>
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={inView ? { y: 0, opacity: 1 } : {}}
-            transition={{ delay: 0.35, duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
+            transition={{
+              delay: 0.35,
+              duration: 0.7,
+              ease: [0.76, 0, 0.24, 1],
+            }}
             className="rounded-[24px] border border-border/60 bg-background/70 p-10 shadow-[0_20px_40px_rgba(30,30,30,0.1)]"
           >
             <p className="text-xl font-light italic leading-relaxed text-foreground/80">
@@ -741,8 +825,12 @@ function AboutSection() {
                 key={stat.label}
                 className="rounded-[20px] border border-border/60 bg-secondary p-8 text-center shadow-[0_16px_40px_rgba(30,30,30,0.1)]"
               >
-                <span className="text-4xl font-semibold tracking-[-0.1em] text-foreground">{stat.value}</span>
-                <p className="mt-3 text-xs uppercase tracking-[0.32em] text-foreground/60">{stat.label}</p>
+                <span className="text-4xl font-semibold tracking-[-0.1em] text-foreground">
+                  {stat.value}
+                </span>
+                <p className="mt-3 text-xs uppercase tracking-[0.32em] text-foreground/60">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </motion.div>

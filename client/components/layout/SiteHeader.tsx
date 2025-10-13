@@ -16,13 +16,18 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-white/70 backdrop-blur-md border-b border-border/60">
       <div className="container flex items-center justify-between py-5">
-        <Link to="/" className="flex items-center gap-3 text-xl font-semibold tracking-[-0.08em]">
+        <Link
+          to="/"
+          className="flex items-center gap-3 text-xl font-semibold tracking-[-0.08em]"
+        >
           <div className="relative h-10 w-10 rounded-full bg-primary shadow-[0_10px_30px_rgba(224,255,152,0.45)]" />
           <div className="leading-tight">
             <span className="block text-base uppercase tracking-[0.32em] text-foreground/80">
               Pride
             </span>
-            <span className="block text-2xl font-semibold text-foreground">Eventz</span>
+            <span className="block text-2xl font-semibold text-foreground">
+              Eventz
+            </span>
           </div>
         </Link>
 
@@ -43,7 +48,9 @@ export function SiteHeader() {
                   <span>{link.label}</span>
                   <span
                     className={`h-1 w-6 rounded-full bg-primary transition-all duration-500 ${
-                      isActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                      isActive
+                        ? "scale-x-100 opacity-100"
+                        : "scale-x-0 opacity-0"
                     }`}
                   />
                 </span>
@@ -55,7 +62,10 @@ export function SiteHeader() {
         <div className="hidden lg:flex items-center gap-6">
           <div className="flex flex-col text-right text-[0.65rem] uppercase tracking-[0.32em] text-foreground/70">
             <span>Call us</span>
-            <a href="tel:+919895690349" className="text-sm font-medium tracking-[0.2em] text-foreground">
+            <a
+              href="tel:+919895690349"
+              className="text-sm font-medium tracking-[0.2em] text-foreground"
+            >
               +91 98956 90349
             </a>
           </div>
