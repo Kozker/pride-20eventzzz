@@ -11,6 +11,8 @@ interface PlaceholderPageProps {
   ctas?: CTA[];
 }
 
+const isExternalLink = (href: string) => /^(https?:|mailto:|tel:)/.test(href);
+
 export function PlaceholderPage({ title, description, ctas = [] }: PlaceholderPageProps) {
   return (
     <section className="relative isolate overflow-hidden bg-secondary py-32" aria-labelledby="placeholder-heading">
@@ -30,17 +32,36 @@ export function PlaceholderPage({ title, description, ctas = [] }: PlaceholderPa
             We're curating this experience next. In the meantime, explore our hero showcase or connect with us for bespoke event concepts tailored to your needs.
           </p>
           <div className="flex flex-wrap gap-4">
-            {ctas.map((cta) => (
-              <Link
-                key={cta.label}
-                to={cta.href}
-                className="group relative inline-flex items-center gap-3 rounded-md border border-foreground/20 bg-background px-6 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-foreground transition-all duration-500 hover:-translate-y-1"
-              >
-                <span className="relative z-10">{cta.label}</span>
-                <span className="relative z-10 text-lg">→</span>
-                <span className="absolute inset-0 rounded-md bg-primary/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              </Link>
-            ))}
+            {ctas.map((cta) => {
+              const external = isExternalLink(cta.href);
+
+              const sharedClasses =
+                "group relative inline-flex items-center gap-3 rounded-md border border-foreground/20 bg-background px-6 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-foreground transition-all duration-500 hover:-translate-y-1";
+
+              if (external) {
+                return (
+                  <a
+                    key={cta.label}
+                    href={cta.href}
+                    target={cta.href.startsWith("http") ? "_blank" : undefined}
+                    rel={cta.href.startsWith("http") ? "noreferrer" : undefined}
+                    className={sharedClasses}
+                  >
+                    <span className="relative z-10">{cta.label}</span>
+                    <span className="relative z-10 text-lg">→</span>
+                    <span className="absolute inset-0 rounded-md bg-primary/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  </a>
+                );
+              }
+
+              return (
+                <Link key={cta.label} to={cta.href} className={sharedClasses}>
+                  <span className="relative z-10">{cta.label}</span>
+                  <span className="relative z-10 text-lg">→</span>
+                  <span className="absolute inset-0 rounded-md bg-primary/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
