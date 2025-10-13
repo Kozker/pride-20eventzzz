@@ -3,13 +3,18 @@ import type { Config } from "tailwindcss";
 export default {
   darkMode: ["class"],
   content: ["./client/**/*.{ts,tsx}"],
-  prefix: "",
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1.6rem",
+        sm: "2rem",
+        lg: "3rem",
+        xl: "3.5rem",
+        "2xl": "4rem",
+      },
       screens: {
-        "2xl": "1400px",
+        "2xl": "1440px",
       },
     },
     extend: {
@@ -47,43 +52,46 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        sans: ["ABCArizonaMix", "Inter", "sans-serif"],
+        display: ["ABCArizonaMix", "Inter", "sans-serif"],
+      },
+      transitionTimingFunction: {
+        "ease-smooth": "cubic-bezier(0.76, 0, 0.24, 1)",
+      },
       keyframes: {
-        "accordion-down": {
-          from: {
-            height: "0",
+        "clip-reveal": {
+          "0%": {
+            clipPath: "inset(100% 0 0 0)",
+            transform: "translateY(20px)",
+            opacity: "0",
           },
-          to: {
-            height: "var(--radix-accordion-content-height)",
+          "100%": {
+            clipPath: "inset(0 0 0 0)",
+            transform: "translateY(0)",
+            opacity: "1",
           },
         },
-        "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
+        "float-up": {
+          "0%": {
+            transform: "translateY(12px)",
+            opacity: "0",
           },
-          to: {
-            height: "0",
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
           },
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "clip-reveal": "clip-reveal 0.9s var(--tw-ease, cubic-bezier(0.76, 0, 0.24, 1)) forwards",
+        "float-up": "float-up 0.7s ease forwards",
       },
     },
   },
