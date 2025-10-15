@@ -62,6 +62,8 @@ export function SiteHeader() {
       return;
     }
 
+    setActiveSection("hero");
+
     const observers: IntersectionObserver[] = [];
 
     SECTION_IDS.forEach((id) => {
