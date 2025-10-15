@@ -1,7 +1,14 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
-const FILTERS = ["All", "Corporate", "Weddings", "Sports", "Brand", "Hospitality"] as const;
+const FILTERS = [
+  "All",
+  "Corporate",
+  "Weddings",
+  "Sports",
+  "Brand",
+  "Hospitality",
+] as const;
 
 type FilterCategory = (typeof FILTERS)[number];
 
@@ -83,10 +90,12 @@ export default function ProjectsFilter() {
               Project Index
             </span>
             <h1 className="text-[96px] font-medium leading-[88px] tracking-[-3px]">
-              Explore the Pride Eventz portfolio across formats, sectors, and cities.
+              Explore the Pride Eventz portfolio across formats, sectors, and
+              cities.
             </h1>
             <p className="text-lg leading-relaxed text-foreground/70">
-              Filter to uncover the experiences that match your ambition, or reach out for a curated showcase tailored to your brief.
+              Filter to uncover the experiences that match your ambition, or
+              reach out for a curated showcase tailored to your brief.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 text-sm uppercase tracking-[0.28em]">
@@ -116,10 +125,15 @@ export default function ProjectsFilter() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-[80px] font-medium leading-[72px] tracking-[-2.4px]">
-                {activeFilter === "All" ? "Signature showcases" : `${activeFilter} highlights`}
+                {activeFilter === "All"
+                  ? "Signature showcases"
+                  : `${activeFilter} highlights`}
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-foreground/70">
-                {visibleProjects.length} {visibleProjects.length === 1 ? "experience" : "experiences"} for {activeFilter.toLowerCase()} programs curated by Pride Eventz.
+                {visibleProjects.length}{" "}
+                {visibleProjects.length === 1 ? "experience" : "experiences"}{" "}
+                for {activeFilter.toLowerCase()} programs curated by Pride
+                Eventz.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.32em] text-foreground/60">
@@ -155,8 +169,12 @@ export default function ProjectsFilter() {
                     <span>{project.location}</span>
                     <span>Delivered by Pride Eventz</span>
                   </div>
-                  <h3 className="text-3xl font-semibold tracking-[-0.1em]">{project.title}</h3>
-                  <p className="flex-1 text-base leading-relaxed text-foreground/70">{project.description}</p>
+                  <h3 className="text-3xl font-semibold tracking-[-0.1em]">
+                    {project.title}
+                  </h3>
+                  <p className="flex-1 text-base leading-relaxed text-foreground/70">
+                    {project.description}
+                  </p>
                   <Link
                     to="/contact"
                     className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-foreground/60 transition-transform duration-500 hover:translate-x-1"
@@ -178,7 +196,9 @@ export default function ProjectsFilter() {
               Need a customised showcase?
             </h2>
             <p className="text-lg leading-relaxed text-foreground/70">
-              Share your objectives, audience size, and desired destination. We will curate a tailored playlist of Pride Eventz case studies that mirror your goals.
+              Share your objectives, audience size, and desired destination. We
+              will curate a tailored playlist of Pride Eventz case studies that
+              mirror your goals.
             </p>
             <Link
               to="/contact"
@@ -194,8 +214,12 @@ export default function ProjectsFilter() {
                 key={`${project.title}-summary`}
                 className="rounded-[28px] border border-foreground/10 bg-background/80 p-6 text-sm leading-relaxed text-foreground/70 shadow-[0_16px_30px_rgba(30,30,30,0.08)]"
               >
-                <span className="text-xs uppercase tracking-[0.32em] text-foreground/60">{project.category}</span>
-                <h3 className="mt-2 text-xl font-semibold tracking-[-0.06em] text-foreground">{project.title}</h3>
+                <span className="text-xs uppercase tracking-[0.32em] text-foreground/60">
+                  {project.category}
+                </span>
+                <h3 className="mt-2 text-xl font-semibold tracking-[-0.06em] text-foreground">
+                  {project.title}
+                </h3>
                 <p className="mt-3">{project.description}</p>
               </div>
             ))}

@@ -3,8 +3,16 @@ import { Link } from "react-router-dom";
 
 const CONTACT_CHANNELS = [
   { label: "Call", value: "+91 98956 90349", href: "tel:+919895690349" },
-  { label: "Email", value: "info@prideeventz.in", href: "mailto:info@prideeventz.in" },
-  { label: "Instagram", value: "@prideeventz", href: "https://www.instagram.com/prideeventz?igsh=NWgwbWU5NTViOGdl" },
+  {
+    label: "Email",
+    value: "info@prideeventz.in",
+    href: "mailto:info@prideeventz.in",
+  },
+  {
+    label: "Instagram",
+    value: "@prideeventz",
+    href: "https://www.instagram.com/prideeventz?igsh=NWgwbWU5NTViOGdl",
+  },
 ];
 
 const MEETING_OPTIONS = [
@@ -33,10 +41,13 @@ export default function Contact() {
               Let's collaborate
             </span>
             <h1 className="text-[96px] font-medium leading-[88px] tracking-[-3px]">
-              Share your vision. We will blueprint a Pride Eventz experience around it.
+              Share your vision. We will blueprint a Pride Eventz experience
+              around it.
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-foreground/70">
-              Tell us about your upcoming event, audience size, and desired destination. Our team will respond within one business day with availability, ideas, and next steps.
+              Tell us about your upcoming event, audience size, and desired
+              destination. Our team will respond within one business day with
+              availability, ideas, and next steps.
             </p>
             <div className="grid gap-4 text-sm uppercase tracking-[0.32em] text-foreground/70">
               {CONTACT_CHANNELS.map((channel) => (
@@ -54,7 +65,8 @@ export default function Contact() {
               ))}
             </div>
             <div className="rounded-[28px] border border-foreground/10 bg-background/70 p-8 text-sm leading-relaxed text-foreground/70 shadow-[0_16px_40px_rgba(30,30,30,0.08)]">
-              Mattekkattu Building, NX Joseph Road, Kundannur, Ernakulam-682304, Kochi, Kerala
+              Mattekkattu Building, NX Joseph Road, Kundannur, Ernakulam-682304,
+              Kochi, Kerala
             </div>
           </div>
 
@@ -64,7 +76,10 @@ export default function Contact() {
           >
             <div className="space-y-6">
               <div>
-                <label htmlFor="name" className="text-xs uppercase tracking-[0.32em] text-foreground/60">
+                <label
+                  htmlFor="name"
+                  className="text-xs uppercase tracking-[0.32em] text-foreground/60"
+                >
                   Full name
                 </label>
                 <input
@@ -78,7 +93,10 @@ export default function Contact() {
 
               <div className="grid gap-6 md:grid-cols-2">
                 <div>
-                  <label htmlFor="email" className="text-xs uppercase tracking-[0.32em] text-foreground/60">
+                  <label
+                    htmlFor="email"
+                    className="text-xs uppercase tracking-[0.32em] text-foreground/60"
+                  >
                     Email
                   </label>
                   <input
@@ -91,7 +109,10 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="text-xs uppercase tracking-[0.32em] text-foreground/60">
+                  <label
+                    htmlFor="phone"
+                    className="text-xs uppercase tracking-[0.32em] text-foreground/60"
+                  >
                     Phone
                   </label>
                   <input
@@ -105,7 +126,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="occasion" className="text-xs uppercase tracking-[0.32em] text-foreground/60">
+                <label
+                  htmlFor="occasion"
+                  className="text-xs uppercase tracking-[0.32em] text-foreground/60"
+                >
                   Occasion
                 </label>
                 <select
@@ -121,7 +145,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="date" className="text-xs uppercase tracking-[0.32em] text-foreground/60">
+                <label
+                  htmlFor="date"
+                  className="text-xs uppercase tracking-[0.32em] text-foreground/60"
+                >
                   Event month
                 </label>
                 <input
@@ -133,7 +160,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="notes" className="text-xs uppercase tracking-[0.32em] text-foreground/60">
+                <label
+                  htmlFor="notes"
+                  className="text-xs uppercase tracking-[0.32em] text-foreground/60"
+                >
                   Brief us
                 </label>
                 <textarea
@@ -154,7 +184,8 @@ export default function Contact() {
 
               {submitted && (
                 <div className="rounded-md border border-primary/40 bg-primary/15 px-4 py-3 text-sm text-foreground/80">
-                  Thank you for reaching out. A Pride Eventz producer will contact you shortly to schedule a discovery call.
+                  Thank you for reaching out. A Pride Eventz producer will
+                  contact you shortly to schedule a discovery call.
                 </div>
               )}
             </div>
@@ -169,14 +200,20 @@ export default function Contact() {
               Prefer a direct consultation?
             </h2>
             <p className="text-lg leading-relaxed text-foreground/70">
-              We regularly host virtual walk-throughs of recent projects and in-person site visits across Kochi, Mumbai, Bengaluru, Hyderabad, and Goa.
+              We regularly host virtual walk-throughs of recent projects and
+              in-person site visits across Kochi, Mumbai, Bengaluru, Hyderabad,
+              and Goa.
             </p>
             <div className="rounded-[28px] border border-border/60 bg-secondary p-8 text-sm leading-relaxed text-foreground/70">
               <p>
-                <strong className="text-foreground">Studio Hours:</strong> Monday to Saturday — 10:00 AM to 7:00 PM IST
+                <strong className="text-foreground">Studio Hours:</strong>{" "}
+                Monday to Saturday — 10:00 AM to 7:00 PM IST
               </p>
               <p className="mt-3">
-                <strong className="text-foreground">Virtual Consultations:</strong> Available globally via Google Meet or Zoom.
+                <strong className="text-foreground">
+                  Virtual Consultations:
+                </strong>{" "}
+                Available globally via Google Meet or Zoom.
               </p>
             </div>
             <Link
@@ -189,7 +226,9 @@ export default function Contact() {
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-[32px] border border-border/60 bg-secondary p-8 shadow-[0_18px_40px_rgba(30,30,30,0.08)]">
-              <h3 className="text-2xl font-semibold tracking-[-0.08em]">Production Offices</h3>
+              <h3 className="text-2xl font-semibold tracking-[-0.08em]">
+                Production Offices
+              </h3>
               <p className="mt-4 text-sm leading-relaxed text-foreground/70">
                 Kochi · Bengaluru · Mumbai · Hyderabad
               </p>
@@ -198,7 +237,9 @@ export default function Contact() {
               </p>
             </div>
             <div className="rounded-[32px] border border-border/60 bg-secondary p-8 shadow-[0_18px_40px_rgba(30,30,30,0.08)]">
-              <h3 className="text-2xl font-semibold tracking-[-0.08em]">What to prepare</h3>
+              <h3 className="text-2xl font-semibold tracking-[-0.08em]">
+                What to prepare
+              </h3>
               <ul className="mt-4 space-y-3 text-sm leading-relaxed text-foreground/70">
                 <li>• Approximate guest count and profile</li>
                 <li>• Desired city or destination</li>

@@ -11,7 +11,8 @@ export function Layout() {
 
   useEffect(() => {
     const state = (location.state as Record<string, unknown>) || null;
-    const scrollTarget = typeof state?.scrollTo === "string" ? state.scrollTo : undefined;
+    const scrollTarget =
+      typeof state?.scrollTo === "string" ? state.scrollTo : undefined;
 
     if (!scrollTarget) {
       return;

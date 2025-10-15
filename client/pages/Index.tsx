@@ -189,7 +189,8 @@ function StickyShowreel() {
           loop
           playsInline
           style={{
-            backgroundImage: "url(https://www.pexels.com/download/video/2361938/)",
+            backgroundImage:
+              "url(https://www.pexels.com/download/video/2361938/)",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",

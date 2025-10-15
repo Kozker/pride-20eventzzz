@@ -37,26 +37,22 @@ const processPhases = [
   {
     label: "01",
     title: "Discover",
-    copy:
-      "Immersive workshops to translate your ambitions into a shared creative brief. We analyse audience personas, brand tonality, and business outcomes before sketching the experience arc.",
+    copy: "Immersive workshops to translate your ambitions into a shared creative brief. We analyse audience personas, brand tonality, and business outcomes before sketching the experience arc.",
   },
   {
     label: "02",
     title: "Design",
-    copy:
-      "Mood boards, schematics, production schedules, and narrative beats are refined collaboratively. Every sensory element is prototyped to ensure cohesion across décor, content, and talent.",
+    copy: "Mood boards, schematics, production schedules, and narrative beats are refined collaboratively. Every sensory element is prototyped to ensure cohesion across décor, content, and talent.",
   },
   {
     label: "03",
     title: "Deliver",
-    copy:
-      "On-site direction, run-of-show management, and vendor leadership ensure flawless execution. Our team manages contingencies so you can stay immersed in the celebration.",
+    copy: "On-site direction, run-of-show management, and vendor leadership ensure flawless execution. Our team manages contingencies so you can stay immersed in the celebration.",
   },
   {
     label: "04",
     title: "Amplify",
-    copy:
-      "Post-event storytelling, analytics, and stakeholder debriefs transform the experience into enduring value for your community and brand.",
+    copy: "Post-event storytelling, analytics, and stakeholder debriefs transform the experience into enduring value for your community and brand.",
   },
 ];
 
@@ -96,10 +92,13 @@ export default function ServiceEvents() {
               Events Service Studio
             </span>
             <h1 className="text-[96px] font-medium leading-[88px] tracking-[-3px]">
-              We engineer gatherings that audiences feel, remember, and champion.
+              We engineer gatherings that audiences feel, remember, and
+              champion.
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-foreground/70">
-              Pride Eventz blends strategy, storytelling, and flawless production to elevate corporate summits, luxury weddings, brand activations, and hospitality programs across India and beyond.
+              Pride Eventz blends strategy, storytelling, and flawless
+              production to elevate corporate summits, luxury weddings, brand
+              activations, and hospitality programs across India and beyond.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
@@ -121,17 +120,25 @@ export default function ServiceEvents() {
           </div>
           <div className="grid gap-6 text-sm leading-relaxed text-foreground/75">
             <div className="rounded-[28px] border border-foreground/10 bg-background/80 p-8 shadow-[0_16px_40px_rgba(30,30,30,0.08)]">
-              <h2 className="text-2xl font-semibold tracking-[-0.08em]">Why Pride Eventz?</h2>
+              <h2 className="text-2xl font-semibold tracking-[-0.08em]">
+                Why Pride Eventz?
+              </h2>
               <p className="mt-4">
-                Our core team brings together producers, designers, technologists, and hospitality stylists who have delivered more than 500 events across corporate, lifestyle, and entertainment verticals.
+                Our core team brings together producers, designers,
+                technologists, and hospitality stylists who have delivered more
+                than 500 events across corporate, lifestyle, and entertainment
+                verticals.
               </p>
               <p className="mt-4">
-                Every engagement is tailored around your KPIs—be it alignment, celebration, or amplification—so that the experience lingers long after the final spotlight fades.
+                Every engagement is tailored around your KPIs—be it alignment,
+                celebration, or amplification—so that the experience lingers
+                long after the final spotlight fades.
               </p>
             </div>
             <div className="rounded-[28px] border border-foreground/10 bg-background/60 p-8 text-xs uppercase tracking-[0.32em] text-foreground/60">
               <p>
-                Trusted by enterprise brands, high-profile founders, and families who expect thoughtful detail in every moment.
+                Trusted by enterprise brands, high-profile founders, and
+                families who expect thoughtful detail in every moment.
               </p>
             </div>
           </div>
@@ -148,7 +155,8 @@ export default function ServiceEvents() {
               Every detail, orchestrated with intention
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-foreground/70">
-              Modular service stacks let us tailor the perfect mix for summits, incentives, celebrations, and launches—without compromising craft.
+              Modular service stacks let us tailor the perfect mix for summits,
+              incentives, celebrations, and launches—without compromising craft.
             </p>
           </div>
 
@@ -158,8 +166,12 @@ export default function ServiceEvents() {
                 key={capability.title}
                 className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[28px] border border-border/60 bg-secondary p-10 shadow-[0_20px_40px_rgba(30,30,30,0.1)]"
               >
-                <h3 className="text-3xl font-semibold tracking-[-0.08em]">{capability.title}</h3>
-                <p className="mt-6 flex-1 text-base leading-relaxed text-foreground/70">{capability.description}</p>
+                <h3 className="text-3xl font-semibold tracking-[-0.08em]">
+                  {capability.title}
+                </h3>
+                <p className="mt-6 flex-1 text-base leading-relaxed text-foreground/70">
+                  {capability.description}
+                </p>
                 <span className="mt-8 inline-flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-foreground/60 transition-transform duration-500 group-hover:translate-x-1">
                   Included in bespoke proposals
                   <span className="text-lg">→</span>
@@ -181,7 +193,9 @@ export default function ServiceEvents() {
                 A collaborative arc from discovery to amplification
               </h2>
               <p className="text-lg leading-relaxed text-foreground/70">
-                We integrate seamlessly with your internal teams, working as an extension of your brand to keep the planning journey energised, transparent, and on schedule.
+                We integrate seamlessly with your internal teams, working as an
+                extension of your brand to keep the planning journey energised,
+                transparent, and on schedule.
               </p>
             </div>
             <div className="space-y-8">
@@ -191,10 +205,16 @@ export default function ServiceEvents() {
                   className="rounded-[28px] border border-foreground/10 bg-background/80 p-8 shadow-[0_18px_40px_rgba(30,30,30,0.08)]"
                 >
                   <div className="flex items-start justify-between gap-6">
-                    <span className="text-4xl font-semibold tracking-[-0.12em] text-foreground/40">{phase.label}</span>
-                    <h3 className="text-2xl font-semibold tracking-[-0.08em]">{phase.title}</h3>
+                    <span className="text-4xl font-semibold tracking-[-0.12em] text-foreground/40">
+                      {phase.label}
+                    </span>
+                    <h3 className="text-2xl font-semibold tracking-[-0.08em]">
+                      {phase.title}
+                    </h3>
                   </div>
-                  <p className="mt-4 text-base leading-relaxed text-foreground/70">{phase.copy}</p>
+                  <p className="mt-4 text-base leading-relaxed text-foreground/70">
+                    {phase.copy}
+                  </p>
                 </div>
               ))}
             </div>
@@ -214,7 +234,9 @@ export default function ServiceEvents() {
               </h2>
             </div>
             <p className="max-w-xl text-lg leading-relaxed text-foreground/70">
-              Whether you are rallying a global workforce or celebrating a milestone, Pride Eventz brings together storytellers, producers, and hospitality experts to make every detail resonate.
+              Whether you are rallying a global workforce or celebrating a
+              milestone, Pride Eventz brings together storytellers, producers,
+              and hospitality experts to make every detail resonate.
             </p>
           </div>
 
@@ -236,8 +258,12 @@ export default function ServiceEvents() {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col gap-4 p-8">
-                  <h3 className="text-3xl font-semibold tracking-[-0.1em]">{experience.title}</h3>
-                  <p className="flex-1 text-base leading-relaxed text-foreground/70">{experience.description}</p>
+                  <h3 className="text-3xl font-semibold tracking-[-0.1em]">
+                    {experience.title}
+                  </h3>
+                  <p className="flex-1 text-base leading-relaxed text-foreground/70">
+                    {experience.description}
+                  </p>
                   <Link
                     to="/projects/filter"
                     className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-foreground/60 transition-transform duration-500 hover:translate-x-1"
@@ -259,23 +285,35 @@ export default function ServiceEvents() {
               Ready to design your next signature event?
             </h2>
             <p className="text-lg leading-relaxed text-background/80">
-              Share your objectives and we will craft a bespoke blueprint that covers creative, production, and hospitality streams—complete with budget guidance and timelines.
+              Share your objectives and we will craft a bespoke blueprint that
+              covers creative, production, and hospitality streams—complete with
+              budget guidance and timelines.
             </p>
             <div className="flex flex-wrap items-center gap-4 text-xs uppercase tracking-[0.28em] text-background/70">
-              <a href="mailto:info@prideeventz.in" className="inline-flex items-center gap-3">
+              <a
+                href="mailto:info@prideeventz.in"
+                className="inline-flex items-center gap-3"
+              >
                 info@prideeventz.in
                 <span className="text-lg">↗</span>
               </a>
-              <a href="tel:+919895690349" className="inline-flex items-center gap-3">
+              <a
+                href="tel:+919895690349"
+                className="inline-flex items-center gap-3"
+              >
                 +91 98956 90349
                 <span className="text-lg">↗</span>
               </a>
             </div>
           </div>
           <div className="rounded-[32px] border border-background/20 bg-background/10 p-10">
-            <h3 className="text-2xl font-semibold tracking-[-0.08em] text-background">Fast-track inquiry</h3>
+            <h3 className="text-2xl font-semibold tracking-[-0.08em] text-background">
+              Fast-track inquiry
+            </h3>
             <p className="mt-3 text-sm leading-relaxed text-background/70">
-              Tell us about your upcoming event, audience size, and desired location. Our team will reply within one business day with availability and next steps.
+              Tell us about your upcoming event, audience size, and desired
+              location. Our team will reply within one business day with
+              availability and next steps.
             </p>
             <ul className="mt-6 space-y-3 text-sm leading-relaxed text-background/70">
               <li>• Corporate conferences, dealer meets, IPO launches</li>
