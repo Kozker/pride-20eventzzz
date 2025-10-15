@@ -188,6 +188,12 @@ function StickyShowreel() {
           muted={muted}
           loop
           playsInline
+          style={{
+            backgroundImage: "url(https://www.pexels.com/download/video/2361938/)",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 flex flex-col items-end gap-[20.8px] pb-14">
