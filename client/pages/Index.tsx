@@ -279,7 +279,7 @@ function EventsShowcase() {
   return (
     <section
       id="events"
-      className="relative z-[5] h-[729.6px] w-full bg-[#F7FFDC]"
+      className="relative h-[729.6px] w-full bg-[#F7FFDC]"
       aria-labelledby="events-heading"
     >
       <div
