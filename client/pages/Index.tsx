@@ -175,7 +175,7 @@ function StickyShowreel() {
   return (
     <section
       id="hero"
-      className="relative z-0 min-h-[85vh] w-full overflow-hidden bg-[#F3EFEB]"
+      className="relative z-0 min-h-[80vh] w-full overflow-hidden bg-[#F3EFEB] lg:min-h-[90vh]"
       aria-labelledby="showreel-heading"
     >
       <div className="relative h-full w-full">
